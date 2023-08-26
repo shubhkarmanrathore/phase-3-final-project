@@ -35,7 +35,7 @@ class UserApp:
             self.session.add(new_security_question)
         
         self.session.commit()
-        print("User registered successfully!")
+        print("User registration successful!")
 
     def login(self):
         username = input("Enter your username: ")
