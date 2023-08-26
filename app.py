@@ -53,6 +53,7 @@ class UserApp:
         return user
 
     def account_settings(self):
+        # Manage user account settings: edit and delete accounts.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -67,6 +68,7 @@ class UserApp:
             self.delete_user_account()
 
     def edit_user_account(self):
+        # Let logged-in users edit account details.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -85,6 +87,7 @@ class UserApp:
         print("User account updated successfully!")
 
     def delete_user_account(self):
+        # Let logged-in users delete their account after confirmation.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -99,6 +102,7 @@ class UserApp:
             print("Account deletion cancelled.")
 
     def your_passwords(self):
+        # Access stored passwords after answering security questions.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -129,6 +133,7 @@ class UserApp:
             self.delete_password()
     
     def add_password(self):
+        # Let logged-in users add a new password entry.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -144,6 +149,7 @@ class UserApp:
         print("Password added successfully!")
 
     def get_password(self):
+        # View stored passwords with proper formatting.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -157,6 +163,7 @@ class UserApp:
                 print(f"Website: {password.website}, Username: {password.username}, Password: {password.password}, Date Added: {password.date_added}")
     
     def edit_password(self):
+        # Edit a stored password.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -191,6 +198,7 @@ class UserApp:
         print("Password updated successfully!")
 
     def delete_password(self):
+        # Delete a stored password.
         if not self.logged_in_user:
             print("You must be logged in.")
             return
@@ -216,6 +224,7 @@ class UserApp:
         print("Password deleted successfully!")
 
     def app(self):
+        # Main application loop for user interactions.
         Base.metadata.create_all(bind=self.engine)
         while True:
             if not self.logged_in_user:
