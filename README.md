@@ -34,7 +34,7 @@ Watch the full video here:
 This project was created as a learning exercise, and it would not have been possible without the resources and support of the following:
 - Flatiron School community
 - Dedicated teachers and fellow students
-- The web development community on Stack Overflow and MDN Web Docs for providing helpful resources and insights
+- The insightful web development community on Stack Overflow and MDN Web Docs
 
 ## License
 This project is licensed under MIT license. Copyright (c) 2012-2023 Scott Chacon and others
