@@ -163,12 +163,16 @@ class UserApp:
             print("No passwords stored.")
             return
 
-        print("Stored passwords:")
-        for idx, password in enumerate(passwords, start=1):
-            print(f"{idx}. Website: {password.website}, Username: {password.username}")
+        password_choices = [f"Website: {password.website}, Username: {password.username}" for password in passwords]
+        password_choices.append("Go Back")
 
-        password_choice = int(input("Select a password to edit (enter number): "))
-        selected_password = passwords[password_choice - 1]
+        password_menu = TerminalMenu(password_choices, title="Select a password to edit:")
+        password_choice_idx = password_menu.show()
+
+        if password_choice_idx == len(passwords):  # Go back
+            return
+
+        selected_password = passwords[password_choice_idx]
 
         new_website = input("Enter the new website: ")
         new_username = input("Enter the new username: ")
