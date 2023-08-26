@@ -27,7 +27,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 5. Utilize the arrow keys to seamlessly navigate through the application's intuitive menu system.
 
 ## Non-technical walkthrough video
-Watch the full video here:
+Watch the full walkthrough video here:
 
 
 ## Acknowledgments
