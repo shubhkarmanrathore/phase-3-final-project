@@ -14,7 +14,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 
 ## Technologies Used
 - Python: The foundation of the application, driving its logic and functionality.
-- SQLAlchemy
+- SQLAlchemy: For efficient database management and querying.
 - SQLite
 - Passlib (Encryption)
 - simple_terminal_menu (Terminal menu)
