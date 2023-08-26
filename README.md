@@ -13,7 +13,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 - Command-line interface for interaction.
 
 ## Technologies Used
-- Python
+- Python: The foundation of the application, driving its logic and functionality.
 - SQLAlchemy
 - SQLite
 - Passlib (Encryption)
