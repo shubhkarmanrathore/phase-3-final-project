@@ -17,6 +17,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 - SQLAlchemy
 - SQLite
 - Passlib (Encryption)
+- simple_terminal_menu (Terminal menu)
 
 ## Getting started
 1. Begin by cloning the project repository using the command: git clone
