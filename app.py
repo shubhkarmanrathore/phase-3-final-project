@@ -13,31 +13,32 @@ class UserApp:
         self.logged_in_user = None
 
     def signup(self):
-        # Allow users to sign up with info, security questions, and encrypted password.
-        first_name = input("Enter your first name: ")
-        last_name = input("Enter your last name: ")
-        username = input("Enter a username: ")
-        existing_user = self.session.query(User).filter_by(username=username).first()
+        user_data = {
+            "first_name": input("Enter your first name: "),
+            "last_name": input("Enter your last name: "),
+            "username": input("Enter a username: "),
+        }
+        existing_user = self.session.query(User).filter_by(username=user_data["username"]).first()
 
         if existing_user:
             print("Username already taken. Please choose a different username.")
             return
 
-        password = input("Enter a password: ")
-        new_user = User(first_name=first_name, last_name=last_name, username=username)
-        new_user.set_password(password)
+        user_data["password"] = input("Enter a password: ")
+        new_user = User(first_name=user_data["first_name"], last_name=user_data["last_name"], username=user_data["username"])
+        new_user.set_password(user_data["password"])
 
         self.session.add(new_user)
         self.session.commit()
 
-        for _ in range(3):
-            question = input(f"Set security question {_ + 1}: ")
-            answer = input(f"Answer for security question {_ + 1}: ")
-            new_security_question = SecurityQuestion(question=question, answer=answer, user_id=new_user.id)
+        for idx in range(3):
+            security_question = input(f"Set security question {idx + 1}: ")
+            answer = input(f"Answer for security question {idx + 1}: ")
+            new_security_question = SecurityQuestion(question=security_question, answer=answer, user_id=new_user.id)
             self.session.add(new_security_question)
         
         self.session.commit()
-        print("User registration successful!")
+        print("User registration successful!\n")
 
     def login(self):
         # Allow users to log in by verifying username and password.
@@ -49,7 +50,7 @@ class UserApp:
             print("Invalid username or password.")
             return None
 
-        print(f"Welcome, {user.first_name}!")
+        print(f"Welcome, {user.first_name}!\n")
         return user
 
     def account_settings(self):
