@@ -231,7 +231,7 @@ Welcome to OnePass - Your Password Manager
                     print("Invalid choice. Please select a valid option.")
             else:
                 choices = ["Account Settings", "Your Passwords", "Logout"]
-                menu = TerminalMenu(choices, title=f"Welcome, {self.logged_in_user.first_name}")
+                menu = TerminalMenu(choices, title='Main Menu')
                 choice_idx = menu.show()
 
                 if choice_idx == 0:
