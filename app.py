@@ -158,9 +158,15 @@ class UserApp:
         if not passwords:
             print("No passwords stored.")
         else:
-            print("Stored passwords:")
-            for password in passwords:
-                print(f"Website: {password.website}, Username: {password.username}, Password: {password.password}, Date Added: {password.date_added}")
+            print("\nStored passwords:\n")
+            for idx, password in enumerate(passwords, start=1):
+                print(f"Password {idx}:")
+                print(f"Website: {password.website}")
+                print(f"Username: {password.username}")
+                print(f"Password: {password.password}")
+                print(f"Date Added: {password.date_added}")
+                print(f"Notes: {password.notes}" if password.notes else "")
+                print("-" * 30)
     
     def edit_password(self):
         # Edit a stored password.
