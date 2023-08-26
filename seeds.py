@@ -12,10 +12,10 @@ session = Session()
 session.query(User).delete()
 
 user = [{
-    "first_name": "Shubh",
-    "last_name": "Rathore",
-    "username": "blabal",
-    "password": "jfnreofoire" 
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "johndoe",
+    "password": "12345" 
 }]
 
 for user_data in user:
