@@ -2,7 +2,7 @@
 
 OnePass (Password Manager)
 
-This is a CLI application built with Python. The app uses SQLAlchemy for database management and Passlib for password hashing. Users can sign up, log in, manage their accounts, set security questions, and store passwords securely.
+Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeguard your credentials, manage passwords effortlessly, and access them securely, all within a terminal interface. Built with Python and SQLAlchemy, OnePass offers user-friendly navigation and secure hashing for peace of mind. Simplify password management and stay in control with OnePass.
 
 ## Features
 - User registration and login functionality.
