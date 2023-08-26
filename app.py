@@ -203,7 +203,7 @@ class UserApp:
         password_menu = TerminalMenu(password_choices, title="Select a password to delete:")
         password_choice_idx = password_menu.show()
 
-        if password_choice_idx == len(passwords):  # Go back
+        if password_choice_idx == len(passwords):
             return
 
         selected_password = passwords[password_choice_idx]
