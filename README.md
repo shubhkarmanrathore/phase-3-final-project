@@ -16,7 +16,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 - Python: The foundation of the application, driving its logic and functionality.
 - SQLAlchemy: For efficient database management and querying.
 - SQLite: The database engine for storing user data securely.
-- Passlib (Encryption)
+- Passlib (Encryption): Ensures passwords are securely hashed and stored.
 - simple_terminal_menu (Terminal menu)
 
 ## Getting started
