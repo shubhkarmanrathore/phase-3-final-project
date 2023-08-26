@@ -209,7 +209,16 @@ class UserApp:
         while True:
             if not self.logged_in_user:
                 choices = ["Signup", "Login", "Exit"]
-                menu = TerminalMenu(choices, title="Welcome to User Management and Password Storage App")
+                menu = TerminalMenu(choices, title='''
+ ____                _____                 
+ / __ \              |  __ \                
+| |  | | _ __    ___ | |__) |__ _  ___  ___ 
+| |  | || '_ \  / _ \|  ___// _` |/ __|/ __|
+| |__| || | | ||  __/| |   | (_| |\__ \\__ \\
+ \____/ |_| |_| \___||_|    \__,_||___/|___/
+                                            
+Welcome to OnePass - Your Password Manager
+''')
                 choice_idx = menu.show()
 
                 if choice_idx == 0:
