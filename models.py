@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, func
 from sqlalchemy.ext.declarative import declarative_base
 from passlib.hash import bcrypt_sha256
 from sqlalchemy.orm import relationship
+import datetime
 
 Base = declarative_base()
 
@@ -45,7 +46,7 @@ class Password(Base):
     username = Column(String, nullable=False)
     password = Column(String, nullable=False)
     notes = Column(String)
-    date_added = Column(DateTime, default=func.now())
+    date_added = Column(DateTime, default=datetime.datetime.utcnow)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
     def __repr__(self):

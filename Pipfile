@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 alembic = "*"
 sqlalchemy = "==1.4.41"
+simple-term-menu = "*"
+pyfiglet = "*"
 
 [dev-packages]
 

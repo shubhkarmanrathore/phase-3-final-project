@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Base, User, SecurityQuestion, Password
 import random
-import datetime
+from simple_term_menu import TerminalMenu
 
 class UserApp:
     def __init__(self):
@@ -55,13 +55,13 @@ class UserApp:
             print("You need to log in first.")
             return
 
-        print("Account Settings:")
-        print("1. Edit User Account\n2. Delete User Account\n3. Back to Main Menu")
-        choice = input("Enter your choice: ")
+        choices = ["Edit User Account", "Delete User Account", "Back to Main Menu"]
+        menu = TerminalMenu(choices, title="Account Settings")
+        choice_idx = menu.show()
 
-        if choice == "1":
+        if choice_idx == 0:
             self.edit_user_account()
-        elif choice == "2":
+        elif choice_idx == 1:
             self.delete_user_account()
 
     def edit_user_account(self):
@@ -113,17 +113,17 @@ class UserApp:
             print("Failed to answer security questions. Access denied.")
             return
 
-        print("Your Passwords:")
-        print("1. Add Password\n2. Get Passwords\n3. Edit Password\n4. Delete Password\n5. Back to Main Menu")
-        choice = input("Enter your choice: ")
+        choices = ["Add Password", "Get Passwords", "Edit Password", "Delete Password", "Back to Main Menu"]
+        menu = TerminalMenu(choices, title="Your Passwords")
+        choice_idx = menu.show()
 
-        if choice == "1":
+        if choice_idx == 0:
             self.add_password()
-        elif choice == "2":
+        elif choice_idx == 1:
             self.get_password()
-        elif choice == "3":
+        elif choice_idx == 2:
             self.edit_password()
-        elif choice == "4":
+        elif choice_idx == 3:
             self.delete_password()
     
     def add_password(self):
@@ -207,29 +207,31 @@ class UserApp:
 
 
     def run_app(self):
-        Base.metadata.create_all(bind=self.engine)  # Create user tables if they don't exist
+        Base.metadata.create_all(bind=self.engine)
         while True:
             if not self.logged_in_user:
-                print("1. Signup\n2. Login\n3. Exit")
-                choice = input("Enter your choice: ")
-                
-                if choice == "1":
+                choices = ["Signup", "Login", "Exit"]
+                menu = TerminalMenu(choices, title="Welcome to User Management and Password Storage App")
+                choice_idx = menu.show()
+
+                if choice_idx == 0:
                     self.signup()
-                elif choice == "2":
+                elif choice_idx == 1:
                     self.logged_in_user = self.login()
-                elif choice == "3":
+                elif choice_idx == 2:
                     break
                 else:
                     print("Invalid choice. Please select a valid option.")
             else:
-                print("1. Account Settings\n2. Your Passwords\n3. Logout")
-                choice = input("Enter your choice: ")
-                
-                if choice == "1":
+                choices = ["Account Settings", "Your Passwords", "Logout"]
+                menu = TerminalMenu(choices, title=f"Welcome, {self.logged_in_user.first_name}")
+                choice_idx = menu.show()
+
+                if choice_idx == 0:
                     self.account_settings()
-                elif choice == "2":
+                elif choice_idx == 1:
                     self.your_passwords()
-                elif choice == "3":
+                elif choice_idx == 2:
                     self.logged_in_user = None
                 else:
                     print("Invalid choice. Please select a valid option.")
