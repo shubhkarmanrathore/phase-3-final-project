@@ -10,7 +10,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 - Security Questions: Set and answer security questions for password recovery.
 - Password Storage: Store and manage passwords for different websites with confidence.
 - Password Actions: Add, view, edit, and delete stored passwords with ease.
-- Command-line interface for interaction.
+- Command-Line Interface: Seamlessly interact with OnePass through a user-friendly terminal menu.
 
 ## Technologies Used
 - Python: The foundation of the application, driving its logic and functionality.
