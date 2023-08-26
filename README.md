@@ -5,7 +5,6 @@ OnePass (Password Manager)
 This is a CLI application built with Python. The app uses SQLAlchemy for database management and Passlib for password hashing. Users can sign up, log in, manage their accounts, set security questions, and store passwords securely.
 
 ## Features
-
 - User registration and login functionality.
 - User account management: Edit user details, change password, and delete account.
 - Set security questions and answers for password recovery.
@@ -19,10 +18,28 @@ This is a CLI application built with Python. The app uses SQLAlchemy for databas
 - SQLite
 - Passlib (Encryption)
 
-## Installation
+## Getting started
+1. Begin by cloning the project repository using the command: git clone
+2. Access the project directory in your terminal and initiate the project environment by executing the command: pipenv install
+3. To initiate the application, invoke the Python shell by entering the command: pipenv shell
+4. Once inside the Python shell, execute the following command to run the application: python3 app.py
+5. Utilize the arrow keys to seamlessly navigate through the application's intuitive menu system.
 
-1. Clone the repository 
-2. Run 'pipenv install' in the terminal to open python shell.
-3. Type 'python3 app.py' in the shell which will run the app.
-4.  
+## Non-technical walkthrough video
+Watch the full video here:
 
+
+## Acknowledgments
+This project was created as a learning exercise, and it would not have been possible without the resources and support of the following:
+- Flatiron School community
+- Teachers and fellow students
+- The web development community on Stack Overflow and MDN Web Docs for providing helpful resources and insights
+
+## License
+This project is licensed under MIT license. Copyright (c) 2012-2023 Scott Chacon and others
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
