@@ -6,12 +6,14 @@ from simple_term_menu import TerminalMenu
 
 class UserApp:
     def __init__(self):
+        # Initialize the UserApp class, set up database connection and session.
         self.engine = create_engine("sqlite:///user.db")
         self.Session = sessionmaker(bind=self.engine)
         self.session = self.Session()
         self.logged_in_user = None
 
     def signup(self):
+        # Allow users to sign up with info, security questions, and encrypted password.
         first_name = input("Enter your first name: ")
         last_name = input("Enter your last name: ")
         username = input("Enter a username: ")
@@ -38,6 +40,7 @@ class UserApp:
         print("User registration successful!")
 
     def login(self):
+        # Allow users to log in by verifying username and password.
         username = input("Enter your username: ")
         password = input("Enter your password: ")
         user = self.session.query(User).filter_by(username=username).first()
