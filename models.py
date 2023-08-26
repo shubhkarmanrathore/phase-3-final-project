@@ -6,6 +6,7 @@ import datetime
 
 Base = declarative_base()
 
+# Define the User class to represent user data.
 class User(Base):
     __tablename__ = "users"
     
@@ -27,6 +28,7 @@ class User(Base):
     def __repr__(self):
         return f"<User(id={self.id}, username={self.username})>"
 
+# Define the SecurityQuestion class to store user security questions and answers.
 class SecurityQuestion(Base):
     __tablename__ = "security_questions"
 
@@ -38,6 +40,7 @@ class SecurityQuestion(Base):
     def __repr__(self):
         return f"<SecurityQuestion(id={self.id}, question={self.question})>"
 
+# Define the Password class to store user passwords and associated information.
 class Password(Base):
     __tablename__ = "passwords"
 
