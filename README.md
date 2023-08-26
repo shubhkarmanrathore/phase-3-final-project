@@ -33,7 +33,7 @@ Watch the full video here:
 ## Acknowledgments
 This project was created as a learning exercise, and it would not have been possible without the resources and support of the following:
 - Flatiron School community
-- Teachers and fellow students
+- Dedicated teachers and fellow students
 - The web development community on Stack Overflow and MDN Web Docs for providing helpful resources and insights
 
 ## License
