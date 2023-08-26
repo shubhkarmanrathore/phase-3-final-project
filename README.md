@@ -17,7 +17,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 - SQLAlchemy: For efficient database management and querying.
 - SQLite: The database engine for storing user data securely.
 - Passlib (Encryption): Ensures passwords are securely hashed and stored.
-- simple_terminal_menu (Terminal menu)
+- simple_terminal_menu (Terminal menu): Provides an intuitive menu system for user interaction.
 
 ## Getting started
 1. Begin by cloning the project repository using the command: git clone git@github.com:shubhkarmanrathore/phase-3-final-project.git
