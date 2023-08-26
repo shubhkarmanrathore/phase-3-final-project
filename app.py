@@ -111,7 +111,7 @@ class UserApp:
             question = random.choice(self.logged_in_user.security_questions)
             user_answer = input(f"Answer the following security question: {question.question}\n")
 
-            if user_answer == question.answer:
+            if user_answer.lower() == question.answer.lower():
                 break
             else:
                 print("Security question answer is incorrect.")
@@ -223,7 +223,7 @@ class UserApp:
         self.session.commit()
         print("Password deleted successfully!")
 
-    def app(self):
+    def main(self):
         # Main application loop for user interactions.
         Base.metadata.create_all(bind=self.engine)
         while True:
@@ -265,4 +265,4 @@ Welcome to OnePass - Your Password Manager
 
 if __name__ == "__main__":
     app = UserApp()
-    app.app()
+    app.main()
