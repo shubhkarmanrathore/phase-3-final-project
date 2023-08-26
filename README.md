@@ -8,7 +8,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 - User Authentication: Register and log in securely to manage your passwords.
 - Account Management: Modify user details, change passwords, and delete accounts.
 - Security Questions: Set and answer security questions for password recovery.
-- Securely store and manage passwords for different websites.
+- Password Storage: Store and manage passwords for different websites with confidence.
 - Add, view, edit, and delete stored passwords.
 - Command-line interface for interaction.
 
