@@ -20,7 +20,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 - simple_terminal_menu (Terminal menu)
 
 ## Getting started
-1. Begin by cloning the project repository using the command: git clone
+1. Begin by cloning the project repository using the command: git clone git@github.com:shubhkarmanrathore/phase-3-final-project.git
 2. Access the project directory in your terminal and initiate the project environment by executing the command: pipenv install
 3. To initiate the application, invoke the Python shell by entering the command: pipenv shell
 4. Once inside the Python shell, execute the following command to run the application: python3 app.py
