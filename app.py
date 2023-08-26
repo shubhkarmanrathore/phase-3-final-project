@@ -18,7 +18,7 @@ class UserApp:
         existing_user = self.session.query(User).filter_by(username=username).first()
 
         if existing_user:
-            print("Username already exists. Please choose a different username.")
+            print("Username already taken. Please choose a different username.")
             return
 
         password = input("Enter a password: ")
@@ -28,7 +28,6 @@ class UserApp:
         self.session.add(new_user)
         self.session.commit()
 
-        # Set security questions
         for _ in range(3):
             question = input(f"Set security question {_ + 1}: ")
             answer = input(f"Answer for security question {_ + 1}: ")
@@ -52,7 +51,7 @@ class UserApp:
 
     def account_settings(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         choices = ["Edit User Account", "Delete User Account", "Back to Main Menu"]
@@ -66,7 +65,7 @@ class UserApp:
 
     def edit_user_account(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         new_first_name = input("Enter new first name: ")
@@ -84,7 +83,7 @@ class UserApp:
 
     def delete_user_account(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         confirmation = input("Are you sure you want to delete your account? (yes/no): ").lower()
@@ -98,7 +97,7 @@ class UserApp:
 
     def your_passwords(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         for _ in range(3):
@@ -128,7 +127,7 @@ class UserApp:
     
     def add_password(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         website = input("Enter the website: ")
@@ -143,7 +142,7 @@ class UserApp:
 
     def get_password(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         passwords = self.session.query(Password).filter_by(user_id=self.logged_in_user.id).all()
@@ -156,7 +155,7 @@ class UserApp:
     
     def edit_password(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         passwords = self.session.query(Password).filter_by(user_id=self.logged_in_user.id).all()
@@ -186,7 +185,7 @@ class UserApp:
 
     def delete_password(self):
         if not self.logged_in_user:
-            print("You need to log in first.")
+            print("You must be logged in.")
             return
 
         passwords = self.session.query(Password).filter_by(user_id=self.logged_in_user.id).all()
@@ -204,7 +203,6 @@ class UserApp:
         self.session.delete(selected_password)
         self.session.commit()
         print("Password deleted successfully!")
-
 
     def run_app(self):
         Base.metadata.create_all(bind=self.engine)
