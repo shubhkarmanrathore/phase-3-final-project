@@ -5,7 +5,7 @@ OnePass (Password Manager)
 Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeguard your credentials, manage passwords effortlessly, and access them securely, all within a terminal interface. Built with Python and SQLAlchemy, OnePass offers user-friendly navigation and secure hashing for peace of mind. Simplify password management and stay in control with OnePass.
 
 ## Features
-- User registration and login functionality.
+- User Authentication: Register and log in securely to manage your passwords.
 - User account management: Edit user details, change password, and delete account.
 - Set security questions and answers for password recovery.
 - Securely store and manage passwords for different websites.
