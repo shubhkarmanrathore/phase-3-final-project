@@ -204,7 +204,7 @@ class UserApp:
         self.session.commit()
         print("Password deleted successfully!")
 
-    def run_app(self):
+    def app(self):
         Base.metadata.create_all(bind=self.engine)
         while True:
             if not self.logged_in_user:
@@ -245,4 +245,4 @@ Welcome to OnePass - Your Password Manager
 
 if __name__ == "__main__":
     app = UserApp()
-    app.run_app()
+    app.app()
