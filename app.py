@@ -14,9 +14,9 @@ class UserApp:
 
     def signup(self):
         user_data = {
-            "first_name": input("Enter your first name: "),
-            "last_name": input("Enter your last name: "),
-            "username": input("Enter a username: "),
+            "first_name": input("First name: "),
+            "last_name": input("Last name: "),
+            "username": input("Username: "),
         }
         existing_user = self.session.query(User).filter_by(username=user_data["username"]).first()
 
@@ -24,7 +24,7 @@ class UserApp:
             print("Username already taken. Please choose a different username.")
             return
 
-        user_data["password"] = input("Enter a password: ")
+        user_data["password"] = input("Password: ")
         new_user = User(first_name=user_data["first_name"], last_name=user_data["last_name"], username=user_data["username"])
         new_user.set_password(user_data["password"])
 
@@ -42,8 +42,8 @@ class UserApp:
 
     def login(self):
         # Allow users to log in by verifying username and password.
-        username = input("Enter your username: ")
-        password = input("Enter your password: ")
+        username = input("Username: ")
+        password = input("Password: ")
         user = self.session.query(User).filter_by(username=username).first()
 
         if not user or not user.check_password(password):
@@ -74,10 +74,10 @@ class UserApp:
             print("You must be logged in.")
             return
 
-        new_first_name = input("Enter new first name: ")
-        new_last_name = input("Enter new last name: ")
-        new_username = input("Enter new username: ")
-        new_password = input("Enter new password: ")
+        new_first_name = input("New first name: ")
+        new_last_name = input("New last name: ")
+        new_username = input("New username: ")
+        new_password = input("New password: ")
 
         self.logged_in_user.first_name = new_first_name
         self.logged_in_user.last_name = new_last_name
