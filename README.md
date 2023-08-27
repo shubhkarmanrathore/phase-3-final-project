@@ -26,7 +26,7 @@ Unlock Simplicity and Security with OnePass - Your go-to Password Manager! Safeg
 4. Once inside the Python shell, execute the following command to run the application: python3 app.py
 5. Utilize the arrow keys to seamlessly navigate through the application's intuitive menu system.
 
-## Non-technical walkthrough video
+## Walkthrough video
 Watch the full walkthrough video here: https://www.loom.com/share/88e7d34798454d969883d5fa852fc02d
 
 ## Acknowledgments
