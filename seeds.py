@@ -27,3 +27,6 @@ def seed_user_data():
     session.commit()
 
     print('Seeding completed.')
+
+if __name__ == "__main__":
+    seed_user_data()
