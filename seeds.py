@@ -2,7 +2,7 @@ from models import User
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
-def seed_user_data():
+def seed_user():
     print("Seeding user data...")
 
     engine = create_engine("sqlite:///user.db")
@@ -29,4 +29,4 @@ def seed_user_data():
     print('Seeding completed.')
 
 if __name__ == "__main__":
-    seed_user_data()
+    seed_user()
