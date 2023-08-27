@@ -19,3 +19,11 @@ def seed_user_data():
             "password": "12345" 
         }
     ]
+
+    for user_data in user:
+        new_user = User(**user_data)
+        session.add(new_user)
+
+    session.commit()
+
+    print('Seeding completed.')
