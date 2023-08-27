@@ -13,6 +13,7 @@ class UserApp:
         self.logged_in_user = None
 
     def signup(self):
+        # Allow users to sign up with info, security questions, and encrypted password.
         user_data = {
             "first_name": input("First name: "),
             "last_name": input("Last name: "),
